@@ -1,0 +1,42 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+/media
+/staticfiles
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Migrations
+*/migrations/*
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
