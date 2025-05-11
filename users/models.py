@@ -1,9 +1,8 @@
-from django.db import models
-from django.contrib.auth.models import AbstractUser
+from rest_framework import serializers
+from .models import CustomUser
 
-class CustomUser(AbstractUser):
-    ROLE_CHOICES = [('user','User'),('mod','Moderator'),('admin','Admin')]
-    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='user')
-
-    def __str__(self):
-        return f'{self.username} ({self.role})'
+class CustomUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'is_staff', 'is_active', 'role']
+        read_only_fields = ['id', 'is_staff', 'is_active', 'role']  # optional: make 'role' read-only if only admin sets it
