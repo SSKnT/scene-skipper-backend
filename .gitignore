@@ -18,6 +18,8 @@ db.sqlite3
 .env
 .env.local
 
+.env.dev
+
 # VS Code
 .vscode/
 *.code-workspace
